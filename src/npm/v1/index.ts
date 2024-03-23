@@ -4,7 +4,7 @@ import path from 'path';
 import { readProjectManifestOnly } from '@pnpm/read-project-manifest';
 import type { PackageSnapshot, PackageSnapshots, TarballResolution } from '@pnpm/lockfile-types';
 import { nameVerFromPkgSnapshot, pkgSnapshotToResolution } from '@pnpm/lockfile-utils';
-import { parse as parseDepPath } from 'dependency-path';
+import { parse as parseDepPath } from '@pnpm/dependency-path';
 
 import type { Dependencies, Dependency, PackageLock } from './types';
 import { parseLockfile } from '../../pnpm';
@@ -52,22 +52,8 @@ interface NamedDependency extends Dependency {
   dependencies: Record<string, NamedDependency>;
 }
 
-/**
- * pnpm dependencies in lock files are either:
- *   - a dep path (from npm:)
- *   - a dep path (from git:)
- *   - a version (from regular dependency)
- *
- * This function normalizes them all to dep paths
- */
 function depPathFromDependency([name, version]: [string, string]): string {
-  try {
-    parseDepPath(version);
-    return version;
-  } catch {
-    parseDepPath(`/${name}/${version}`);
-    return `/${name}/${version}`;
-  }
+  return `/${name}/${version}`
 }
 
 function namedDependenciesFromSnapshots(snapshots: PackageSnapshots): Record<string, NamedDependency> {

@@ -1,10 +1,10 @@
 import { getLockfileImporterId, Lockfile, ProjectSnapshot, readWantedLockfile } from '@pnpm/lockfile-file';
-import { parse as parseDepPath } from 'dependency-path';
+import { parse as parseDepPath } from '@pnpm/dependency-path';
 import { DEPENDENCIES_FIELDS } from '@pnpm/types';
 import { pruneSharedLockfile } from '@pnpm/prune-lockfile';
 import { getPackages } from '@manypkg/get-packages';
 
-const LATEST_SUPPORTED_PNPM_LOCK_VERSION = 5.4;
+const LATEST_SUPPORTED_PNPM_LOCK_VERSION = 6.0;
 
 export async function parseLockfile(pkgPath: string): Promise<Lockfile> {
   const lock = await readWantedLockfile(pkgPath, { ignoreIncompatible: true });
@@ -27,11 +27,7 @@ export async function parseLockfile(pkgPath: string): Promise<Lockfile> {
  * This function normalizes them all to dep paths
  */
 export function depPathFromDependency([name, version]: [string, string]): ReturnType<typeof parseDepPath> {
-  try {
-    return parseDepPath(version);
-  } catch {
-    return parseDepPath(`/${name}/${version}`);
-  }
+  return parseDepPath(`/${name}/${version}`);
 }
 
 export async function workspaceProjectPaths(lockfileDir: string): Promise<Set<string>> {
