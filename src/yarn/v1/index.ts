@@ -3,58 +3,54 @@ import path from 'path';
 
 import type { Lockfile, ResolvedDependencies, TarballResolution } from '@pnpm/lockfile-types';
 import { nameVerFromPkgSnapshot, pkgSnapshotToResolution } from '@pnpm/lockfile-utils';
-import semver from 'semver';
 
-import type { Dependencies as YarnDependencies, Package, YarnLock } from './types';
-import { depPathFromDependency, dedicatedLockfile, parseLockfile, workspaceProjectPaths } from '../../pnpm';
+import type { Dependencies as YarnDependencies, Package as YarnPackage, YarnLock } from './types';
+import { dedicatedLockfile, parseLockfile, workspaceProjectPaths, packagesWithSpecifiers, versionWithoutPeersSuffix } from '../../pnpm';
 
 export async function convert(lockfileDir: string): Promise<YarnLock> {
-  return parseLockfile(lockfileDir).then(convertLockfile);
+  const lock = await parseLockfile(lockfileDir);
+  return convertLockfile(lock);
 }
 
-export async function convertLockfile(lock: Lockfile): Promise<YarnLock> {
-  const specifiers = Object.values(lock.importers).flatMap((importer) => Object.entries(importer.specifiers));
+export function convertLockfile(lock: Lockfile): YarnLock {
+  const packages = packagesWithSpecifiers(lock);
 
-  return Object.fromEntries(
-    Object.entries(lock.packages ?? {}).map(([depPath, snapshot]) => {
-      const { name, version } = nameVerFromPkgSnapshot(depPath, snapshot);
-      const resolution = pkgSnapshotToResolution(depPath, snapshot, { default: 'https://registry.npmjs.org/' });
+  return Object.fromEntries(packages.map(({ pkg: snapshot, depPath, matchingDependencies }) => {
+    const { version } = nameVerFromPkgSnapshot(depPath, snapshot);
+    const resolution = pkgSnapshotToResolution(depPath, snapshot, { default: 'https://registry.npmjs.org/' });
 
-      const pkg: Package = {
-        version,
-        resolved: (resolution as TarballResolution).tarball,
-      };
+    const pkg: YarnPackage = {
+      version,
+      resolved: (resolution as TarballResolution).tarball,
+    };
 
-      const integrity = (resolution as TarballResolution).integrity;
-      if (integrity) pkg.integrity = integrity;
+    const integrity = (resolution as TarballResolution).integrity;
+    if (integrity) pkg.integrity = integrity;
 
-      if (snapshot.dependencies) {
-        pkg.dependencies = convertDependencies(snapshot.dependencies);
-      }
+    if (snapshot.dependencies) {
+      pkg.dependencies = convertDependencies(snapshot.dependencies);
+    }
 
-      if (snapshot.optionalDependencies) {
-        pkg.optionalDependencies = convertDependencies(snapshot.optionalDependencies)
-      }
+    if (snapshot.optionalDependencies) {
+      pkg.optionalDependencies = convertDependencies(snapshot.optionalDependencies)
+    }
 
-      const names = new Set(
-        specifiers
-          .filter(([pkg]) => pkg === name)
-          .map((entry) => entry[1])
-          .filter((specifier) => semver.satisfies(version, specifier))
-          .concat(version)
-          .map((v) => `"${name}@${v}"`)
-      );
+    const names = new Set(
+      matchingDependencies.map(({ name, specifier }) => `"${name}@${specifier}"`)
+    );
+    if (names.size == 0) {
+      throw new Error(`could not find dependency specifiers for package: ${depPath}`)
+    }
 
-      return [Array.from(names).join(', '), pkg];
-    })
-  );
+    return [Array.from(names).join(", "), pkg] as const
+  }));
 }
 
+// Strip peers suffix from dependency version
 function convertDependencies(dependencies: ResolvedDependencies): YarnDependencies {
   return Object.fromEntries(
-    Object.entries(dependencies ?? {}).map((entry) => {
-      const { name, version } = depPathFromDependency(entry);
-      return [name ?? entry[0], version ?? entry[1]];
+    Object.entries(dependencies ?? {}).map(([name, version]) => {
+      return [name, versionWithoutPeersSuffix(version)];
     })
   );
 }

@@ -36,6 +36,16 @@ Object {
     "resolved": "https://registry.npmjs.org/execa/-/execa-5.1.1.tgz",
     "version": "5.1.1",
   },
+  "\\"execa@npm:safe-execa@0.1.2\\"": Object {
+    "dependencies": Object {
+      "@zkochan/which": "2.0.3",
+      "execa": "5.1.1",
+      "path-name": "1.0.0",
+    },
+    "integrity": "sha512-vdTshSQ2JsRCgT8eKZWNJIL26C6bVqy1SOmuCMlKHegVeo8KYRobRrefOdUq9OozSPUUiSxrylteeRmLOMFfWg==",
+    "resolved": "https://registry.npmjs.org/safe-execa/-/safe-execa-0.1.2.tgz",
+    "version": "0.1.2",
+  },
   "\\"get-stream@6.0.1\\"": Object {
     "integrity": "sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==",
     "resolved": "https://registry.npmjs.org/get-stream/-/get-stream-6.0.1.tgz",
@@ -61,7 +71,7 @@ Object {
     "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
     "version": "4.0.0",
   },
-  "\\"lodash@5.0.0\\"": Object {
+  "\\"lodash@github:lodash/lodash#2da024c3b4f9947a48517639de7560457cd4ec6c\\"": Object {
     "resolved": "https://codeload.github.com/lodash/lodash/tar.gz/2da024c3b4f9947a48517639de7560457cd4ec6c",
     "version": "5.0.0",
   },
@@ -116,16 +126,6 @@ Object {
     "integrity": "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==",
     "resolved": "https://registry.npmjs.org/react/-/react-18.2.0.tgz",
     "version": "18.2.0",
-  },
-  "\\"safe-execa@0.1.2\\"": Object {
-    "dependencies": Object {
-      "@zkochan/which": "2.0.3",
-      "execa": "5.1.1",
-      "path-name": "1.0.0",
-    },
-    "integrity": "sha512-vdTshSQ2JsRCgT8eKZWNJIL26C6bVqy1SOmuCMlKHegVeo8KYRobRrefOdUq9OozSPUUiSxrylteeRmLOMFfWg==",
-    "resolved": "https://registry.npmjs.org/safe-execa/-/safe-execa-0.1.2.tgz",
-    "version": "0.1.2",
   },
   "\\"shebang-command@2.0.0\\"": Object {
     "dependencies": Object {
@@ -251,7 +251,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/autocomplete/-/autocomplete-6.9.0.tgz",
     "version": "6.9.0",
   },
-  "\\"@codemirror/lang-cpp@^6.0.2\\", \\"@codemirror/lang-cpp@6.0.2\\"": Object {
+  "\\"@codemirror/lang-cpp@^6.0.2\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
       "@lezer/cpp": "1.1.1",
@@ -288,7 +288,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-html/-/lang-html-6.4.8.tgz",
     "version": "6.4.8",
   },
-  "\\"@codemirror/lang-java@^6.0.1\\", \\"@codemirror/lang-java@6.0.1\\"": Object {
+  "\\"@codemirror/lang-java@^6.0.1\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
       "@lezer/java": "1.0.4",
@@ -311,7 +311,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-javascript/-/lang-javascript-6.2.2.tgz",
     "version": "6.2.2",
   },
-  "\\"@codemirror/lang-json@^6.0.1\\", \\"@codemirror/lang-json@6.0.1\\"": Object {
+  "\\"@codemirror/lang-json@^6.0.1\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
       "@lezer/json": "1.0.1",
@@ -320,7 +320,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-json/-/lang-json-6.0.1.tgz",
     "version": "6.0.1",
   },
-  "\\"@codemirror/lang-markdown@^6.2.4\\", \\"@codemirror/lang-markdown@6.2.4\\"": Object {
+  "\\"@codemirror/lang-markdown@^6.2.4\\"": Object {
     "dependencies": Object {
       "@codemirror/autocomplete": "6.12.0",
       "@codemirror/lang-html": "6.4.8",
@@ -334,7 +334,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-markdown/-/lang-markdown-6.2.4.tgz",
     "version": "6.2.4",
   },
-  "\\"@codemirror/lang-php@^6.0.1\\", \\"@codemirror/lang-php@6.0.1\\"": Object {
+  "\\"@codemirror/lang-php@^6.0.1\\"": Object {
     "dependencies": Object {
       "@codemirror/lang-html": "6.4.8",
       "@codemirror/language": "6.10.1",
@@ -346,7 +346,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-php/-/lang-php-6.0.1.tgz",
     "version": "6.0.1",
   },
-  "\\"@codemirror/lang-python@^6.1.4\\", \\"@codemirror/lang-python@6.1.4\\"": Object {
+  "\\"@codemirror/lang-python@^6.1.4\\"": Object {
     "dependencies": Object {
       "@codemirror/autocomplete": "6.12.0",
       "@codemirror/language": "6.10.1",
@@ -358,7 +358,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-python/-/lang-python-6.1.4.tgz",
     "version": "6.1.4",
   },
-  "\\"@codemirror/lang-rust@^6.0.1\\", \\"@codemirror/lang-rust@6.0.1\\"": Object {
+  "\\"@codemirror/lang-rust@^6.0.1\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
       "@lezer/rust": "1.0.1",
@@ -367,7 +367,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-rust/-/lang-rust-6.0.1.tgz",
     "version": "6.0.1",
   },
-  "\\"@codemirror/lang-vue@^0.1.3\\", \\"@codemirror/lang-vue@0.1.3\\"": Object {
+  "\\"@codemirror/lang-vue@^0.1.3\\"": Object {
     "dependencies": Object {
       "@codemirror/lang-html": "6.4.8",
       "@codemirror/lang-javascript": "6.2.2",
@@ -380,7 +380,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-vue/-/lang-vue-0.1.3.tgz",
     "version": "0.1.3",
   },
-  "\\"@codemirror/lang-wast@^6.0.2\\", \\"@codemirror/lang-wast@6.0.2\\"": Object {
+  "\\"@codemirror/lang-wast@^6.0.2\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
       "@lezer/common": "1.2.1",
@@ -391,7 +391,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/lang-wast/-/lang-wast-6.0.2.tgz",
     "version": "6.0.2",
   },
-  "\\"@codemirror/lang-xml@^6.0.2\\", \\"@codemirror/lang-xml@6.0.2\\"": Object {
+  "\\"@codemirror/lang-xml@^6.0.2\\"": Object {
     "dependencies": Object {
       "@codemirror/autocomplete": "6.9.0",
       "@codemirror/language": "6.10.1",
@@ -416,7 +416,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@codemirror/language/-/language-6.10.1.tgz",
     "version": "6.10.1",
   },
-  "\\"@codemirror/legacy-modes@^6.3.3\\", \\"@codemirror/legacy-modes@6.3.3\\"": Object {
+  "\\"@codemirror/legacy-modes@^6.3.3\\"": Object {
     "dependencies": Object {
       "@codemirror/language": "6.10.1",
     },
@@ -936,7 +936,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@octokit/request/-/request-8.1.4.tgz",
     "version": "8.1.4",
   },
-  "\\"@octokit/rest@^20.0.2\\", \\"@octokit/rest@20.0.2\\"": Object {
+  "\\"@octokit/rest@^20.0.2\\"": Object {
     "dependencies": Object {
       "@octokit/core": "5.0.1",
       "@octokit/plugin-paginate-rest": "9.0.0",
@@ -960,7 +960,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz",
     "version": "1.0.0-next.21",
   },
-  "\\"@replit/codemirror-lang-svelte@^6.0.0\\", \\"@replit/codemirror-lang-svelte@6.0.0\\"": Object {
+  "\\"@replit/codemirror-lang-svelte@^6.0.0\\"": Object {
     "dependencies": Object {
       "@codemirror/autocomplete": "6.13.0",
       "@codemirror/lang-css": "6.2.1",
@@ -1126,7 +1126,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@sentry/svelte/-/svelte-7.104.0.tgz",
     "version": "7.104.0",
   },
-  "\\"@sentry/sveltekit@^7.104.0\\", \\"@sentry/sveltekit@7.104.0\\"": Object {
+  "\\"@sentry/sveltekit@^7.104.0\\"": Object {
     "dependencies": Object {
       "@sentry-internal/tracing": "7.104.0",
       "@sentry/core": "7.104.0",
@@ -1192,7 +1192,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.8.tgz",
     "version": "0.27.8",
   },
-  "\\"@sveltejs/adapter-static@^2.0.3\\", \\"@sveltejs/adapter-static@2.0.3\\"": Object {
+  "\\"@sveltejs/adapter-static@^2.0.3\\"": Object {
     "dependencies": Object {
       "@sveltejs/kit": "1.30.4",
     },
@@ -1304,7 +1304,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@tauri-apps/cli-win32-x64-msvc/-/cli-win32-x64-msvc-1.5.10.tgz",
     "version": "1.5.10",
   },
-  "\\"@tauri-apps/cli@^1.5.10\\", \\"@tauri-apps/cli@1.5.10\\"": Object {
+  "\\"@tauri-apps/cli@^1.5.10\\"": Object {
     "integrity": "sha512-8+6NJgqSXqsFAEuUERDDRWrLh24TMT4aisn1qpADvKVX4KlBAKE17KTXHI54XQFR8qLbkUFNzprU4M9PV8ighw==",
     "optionalDependencies": Object {
       "@tauri-apps/cli-darwin-arm64": "1.5.10",
@@ -1339,17 +1339,17 @@ Object {
     "resolved": "https://registry.npmjs.org/@types/cookie/-/cookie-0.5.2.tgz",
     "version": "0.5.2",
   },
-  "\\"@types/crypto-js@^4.2.2\\", \\"@types/crypto-js@4.2.2\\"": Object {
+  "\\"@types/crypto-js@^4.2.2\\"": Object {
     "integrity": "sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==",
     "resolved": "https://registry.npmjs.org/@types/crypto-js/-/crypto-js-4.2.2.tgz",
     "version": "4.2.2",
   },
-  "\\"@types/diff-match-patch@^1.0.36\\", \\"@types/diff-match-patch@1.0.36\\"": Object {
+  "\\"@types/diff-match-patch@^1.0.36\\"": Object {
     "integrity": "sha512-xFdR6tkm0MWvBfO8xXCSsinYxHcqkQUlcHeSpMC2ukzOb6lwQAfDmW+Qt0AvlGd8HpsS28qKsB+oPeJn9I39jg==",
     "resolved": "https://registry.npmjs.org/@types/diff-match-patch/-/diff-match-patch-1.0.36.tgz",
     "version": "1.0.36",
   },
-  "\\"@types/diff@^5.0.9\\", \\"@types/diff@5.0.9\\"": Object {
+  "\\"@types/diff@^5.0.9\\"": Object {
     "integrity": "sha512-RWVEhh/zGXpAVF/ZChwNnv7r4rvqzJ7lYNSmZSVTxjV0PBLf6Qu7RNg+SUtkpzxmiNkjCx0Xn2tPp7FIkshJwQ==",
     "resolved": "https://registry.npmjs.org/@types/diff/-/diff-5.0.9.tgz",
     "version": "5.0.9",
@@ -1369,12 +1369,12 @@ Object {
     "resolved": "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz",
     "version": "0.0.29",
   },
-  "\\"@types/lscache@^1.3.4\\", \\"@types/lscache@1.3.4\\"": Object {
+  "\\"@types/lscache@^1.3.4\\"": Object {
     "integrity": "sha512-boZGIpx9t9lISW2EllC4APDwMQAouwViERSZU2T1p5gYs/SVM1ohq29+eBDb8g6D3FDPgeUsOALZIH0IGwLNvw==",
     "resolved": "https://registry.npmjs.org/@types/lscache/-/lscache-1.3.4.tgz",
     "version": "1.3.4",
   },
-  "\\"@types/marked@^5.0.2\\", \\"@types/marked@5.0.2\\"": Object {
+  "\\"@types/marked@^5.0.2\\"": Object {
     "integrity": "sha512-OucS4KMHhFzhz27KxmWg7J+kIYqyqoW5kdIEI319hqARQQUTqhao3M/F+uFnDXD0Rg72iDDZxZNxq5gvctmLlg==",
     "resolved": "https://registry.npmjs.org/@types/marked/-/marked-5.0.2.tgz",
     "version": "5.0.2",
@@ -1411,7 +1411,7 @@ Object {
     "resolved": "https://registry.npmjs.org/@types/semver/-/semver-7.5.1.tgz",
     "version": "7.5.1",
   },
-  "\\"@typescript-eslint/eslint-plugin@^6.21.0\\", \\"@typescript-eslint/eslint-plugin@6.21.0\\"": Object {
+  "\\"@typescript-eslint/eslint-plugin@^6.21.0\\"": Object {
     "dependencies": Object {
       "@eslint-community/regexpp": "4.8.0",
       "@typescript-eslint/parser": "6.21.0",
@@ -1772,7 +1772,7 @@ Object {
     "resolved": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
     "version": "0.4.0",
   },
-  "\\"autoprefixer@^10.4.17\\", \\"autoprefixer@10.4.17\\"": Object {
+  "\\"autoprefixer@^10.4.17\\"": Object {
     "dependencies": Object {
       "browserslist": "4.22.2",
       "caniuse-lite": "1.0.30001579",
@@ -1942,7 +1942,7 @@ Object {
     "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz",
     "version": "3.5.3",
   },
-  "\\"class-transformer@^0.5.1\\", \\"class-transformer@0.5.1\\"": Object {
+  "\\"class-transformer@^0.5.1\\"": Object {
     "integrity": "sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==",
     "resolved": "https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz",
     "version": "0.5.1",
@@ -2015,7 +2015,7 @@ Object {
     "resolved": "https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz",
     "version": "0.0.2",
   },
-  "\\"crypto-js@^4.2.0\\", \\"crypto-js@4.2.0\\"": Object {
+  "\\"crypto-js@^4.2.0\\"": Object {
     "integrity": "sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==",
     "resolved": "https://registry.npmjs.org/crypto-js/-/crypto-js-4.2.0.tgz",
     "version": "4.2.0",
@@ -2034,7 +2034,7 @@ Object {
     "resolved": "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz",
     "version": "3.0.0",
   },
-  "\\"date-fns@^2.30.0\\", \\"date-fns@2.30.0\\"": Object {
+  "\\"date-fns@^2.30.0\\"": Object {
     "dependencies": Object {
       "@babel/runtime": "7.22.15",
     },
@@ -2115,7 +2115,7 @@ Object {
     "resolved": "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz",
     "version": "1.2.2",
   },
-  "\\"diff-match-patch@^1.0.5\\", \\"diff-match-patch@1.0.5\\"": Object {
+  "\\"diff-match-patch@^1.0.5\\"": Object {
     "integrity": "sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==",
     "resolved": "https://registry.npmjs.org/diff-match-patch/-/diff-match-patch-1.0.5.tgz",
     "version": "1.0.5",
@@ -2308,7 +2308,7 @@ Object {
     "resolved": "https://registry.npmjs.org/eslint-compat-utils/-/eslint-compat-utils-0.1.2.tgz",
     "version": "0.1.2",
   },
-  "\\"eslint-config-prettier@^9.1.0\\", \\"eslint-config-prettier@9.1.0\\"": Object {
+  "\\"eslint-config-prettier@^9.1.0\\"": Object {
     "dependencies": Object {
       "eslint": "8.57.0",
     },
@@ -2380,12 +2380,12 @@ Object {
     "resolved": "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz",
     "version": "2.29.1",
   },
-  "\\"eslint-plugin-square-svelte-store@^1.0.0\\", \\"eslint-plugin-square-svelte-store@1.0.0\\"": Object {
+  "\\"eslint-plugin-square-svelte-store@^1.0.0\\"": Object {
     "integrity": "sha512-QLybNNEPcBKVrgAeow/7ouOqbTVsWwEdStFab9ZMZaW19Y//ZEhhtuEb92P69n9u/JRL6EFhArV9AfS+LgS4mA==",
     "resolved": "https://registry.npmjs.org/eslint-plugin-square-svelte-store/-/eslint-plugin-square-svelte-store-1.0.0.tgz",
     "version": "1.0.0",
   },
-  "\\"eslint-plugin-svelte@^2.35.1\\", \\"eslint-plugin-svelte@2.35.1\\"": Object {
+  "\\"eslint-plugin-svelte@^2.35.1\\"": Object {
     "dependencies": Object {
       "@eslint-community/eslint-utils": "4.4.0",
       "@jridgewell/sourcemap-codec": "1.4.15",
@@ -2922,7 +2922,7 @@ Object {
     "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     "version": "2.0.4",
   },
-  "\\"inter-ui@^4.0.2\\", \\"inter-ui@4.0.2\\"": Object {
+  "\\"inter-ui@^4.0.2\\"": Object {
     "integrity": "sha512-YmfzwEtzuVzEenQwSB/tmmqi/A0a2GnFk4mG4ZFULXiO5DNk0fJWiO3o9i1sdVKuMVGx9iiNQnCq8ghWZJVVHw==",
     "resolved": "https://registry.npmjs.org/inter-ui/-/inter-ui-4.0.2.tgz",
     "version": "4.0.2",
@@ -3199,7 +3199,7 @@ Object {
     "resolved": "https://registry.npmjs.org/known-css-properties/-/known-css-properties-0.29.0.tgz",
     "version": "0.29.0",
   },
-  "\\"leven@^4.0.0\\", \\"leven@4.0.0\\"": Object {
+  "\\"leven@^4.0.0\\"": Object {
     "integrity": "sha512-puehA3YKku3osqPlNuzGDUHq8WpwXupUg1V6NXdV38G+gr+gkBwFC8g1b/+YcIvp8gnqVIus+eJCH/eGsRmJNw==",
     "resolved": "https://registry.npmjs.org/leven/-/leven-4.0.0.tgz",
     "version": "4.0.0",
@@ -3288,7 +3288,7 @@ Object {
     "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz",
     "version": "6.0.0",
   },
-  "\\"lscache@^1.3.2\\", \\"lscache@1.3.2\\"": Object {
+  "\\"lscache@^1.3.2\\"": Object {
     "integrity": "sha512-CBZT/pDcaK3I3XGwDLaszDe8hj0pCgbuxd3W79gvHApBSdKVXvR9fillbp6eLvp7dLgtaWm3a1mvmhAqn9uCXQ==",
     "resolved": "https://registry.npmjs.org/lscache/-/lscache-1.3.2.tgz",
     "version": "1.3.2",
@@ -3319,7 +3319,7 @@ Object {
     "resolved": "https://registry.npmjs.org/magicast/-/magicast-0.2.8.tgz",
     "version": "0.2.8",
   },
-  "\\"marked@^10.0.0\\", \\"marked@10.0.0\\"": Object {
+  "\\"marked@^10.0.0\\"": Object {
     "integrity": "sha512-YiGcYcWj50YrwBgNzFoYhQ1hT6GmQbFG8SksnYJX1z4BXTHSOrz1GB5/Jm2yQvMg4nN1FHP4M6r03R10KrVUiA==",
     "resolved": "https://registry.npmjs.org/marked/-/marked-10.0.0.tgz",
     "version": "10.0.0",
@@ -3429,7 +3429,7 @@ Object {
     "resolved": "https://registry.npmjs.org/mlly/-/mlly-1.4.2.tgz",
     "version": "1.4.2",
   },
-  "\\"mm-jsr@^3.0.2\\", \\"mm-jsr@3.0.2\\"": Object {
+  "\\"mm-jsr@^3.0.2\\"": Object {
     "integrity": "sha512-ATbSVKgOU9i54eBLPV+QETFKhGODnCDKsi18TLsET7BCJnX00LjcbOZYvw6ODplJpRY7JCrA861mYfViCDnh3w==",
     "resolved": "https://registry.npmjs.org/mm-jsr/-/mm-jsr-3.0.2.tgz",
     "version": "3.0.2",
@@ -3464,7 +3464,7 @@ Object {
     "resolved": "https://registry.npmjs.org/mz/-/mz-2.7.0.tgz",
     "version": "2.7.0",
   },
-  "\\"nanoevents@^9.0.0\\", \\"nanoevents@9.0.0\\"": Object {
+  "\\"nanoevents@^9.0.0\\"": Object {
     "integrity": "sha512-X8pU7IOpgKXVLPxYUI55ymXc8XuBE+uypfEyEFBtHkD1EX9KavYTVc+vXZHFyHKzA1TaZoVDqklLdQBBrxIuAw==",
     "resolved": "https://registry.npmjs.org/nanoevents/-/nanoevents-9.0.0.tgz",
     "version": "9.0.0",
@@ -3474,7 +3474,7 @@ Object {
     "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz",
     "version": "3.3.7",
   },
-  "\\"nanoid@^5.0.6\\", \\"nanoid@5.0.6\\"": Object {
+  "\\"nanoid@^5.0.6\\"": Object {
     "integrity": "sha512-rRq0eMHoGZxlvaFOUdK1Ev83Bd1IgzzR+WJ3IbDJ7QOSdAxYjlurSPqFs9s4lJg29RT6nPwizFtJhQS6V5xgiA==",
     "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-5.0.6.tgz",
     "version": "5.0.6",
@@ -3591,7 +3591,7 @@ Object {
     "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
     "version": "1.4.0",
   },
-  "\\"openai@^4.28.4\\", \\"openai@4.28.4\\"": Object {
+  "\\"openai@^4.28.4\\"": Object {
     "dependencies": Object {
       "@types/node": "18.19.22",
       "@types/node-fetch": "2.6.11",
@@ -3863,7 +3863,7 @@ Object {
     "resolved": "https://registry.npmjs.org/prettier-plugin-svelte/-/prettier-plugin-svelte-3.2.2.tgz",
     "version": "3.2.2",
   },
-  "\\"prettier-plugin-tailwindcss@^0.5.11\\", \\"prettier-plugin-tailwindcss@0.5.11\\"": Object {
+  "\\"prettier-plugin-tailwindcss@^0.5.11\\"": Object {
     "dependencies": Object {
       "prettier": "3.2.5",
       "prettier-plugin-svelte": "3.2.2",
@@ -3940,7 +3940,7 @@ Object {
     "resolved": "https://registry.npmjs.org/recast/-/recast-0.23.4.tgz",
     "version": "0.23.4",
   },
-  "\\"reflect-metadata@^0.2.1\\", \\"reflect-metadata@0.2.1\\"": Object {
+  "\\"reflect-metadata@^0.2.1\\"": Object {
     "integrity": "sha512-i5lLI6iw9AU3Uu4szRNPPEkomnkjRTaVt9hy/bn5g/oSzekBSMeLZblcjP74AW0vBabqERLLIrz+gR8QYR54Tw==",
     "resolved": "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.2.1.tgz",
     "version": "0.2.1",
@@ -4022,7 +4022,7 @@ Object {
     "resolved": "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz",
     "version": "1.2.0",
   },
-  "\\"rxjs@^7.8.1\\", \\"rxjs@7.8.1\\"": Object {
+  "\\"rxjs@^7.8.1\\"": Object {
     "dependencies": Object {
       "tslib": "2.6.2",
     },
@@ -4258,7 +4258,7 @@ Object {
     "resolved": "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz",
     "version": "1.0.0",
   },
-  "\\"svelte-check@^3.6.6\\", \\"svelte-check@3.6.6\\"": Object {
+  "\\"svelte-check@^3.6.6\\"": Object {
     "dependencies": Object {
       "@jridgewell/trace-mapping": "0.3.19",
       "chokidar": "3.5.3",
@@ -4287,7 +4287,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte-eslint-parser/-/svelte-eslint-parser-0.33.0.tgz",
     "version": "0.33.0",
   },
-  "\\"svelte-floating-ui@^1.5.8\\", \\"svelte-floating-ui@1.5.8\\"": Object {
+  "\\"svelte-floating-ui@^1.5.8\\"": Object {
     "dependencies": Object {
       "@floating-ui/core": "1.5.2",
       "@floating-ui/dom": "1.5.3",
@@ -4296,7 +4296,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte-floating-ui/-/svelte-floating-ui-1.5.8.tgz",
     "version": "1.5.8",
   },
-  "\\"svelte-french-toast@^1.2.0\\", \\"svelte-french-toast@1.2.0\\"": Object {
+  "\\"svelte-french-toast@^1.2.0\\"": Object {
     "dependencies": Object {
       "svelte": "4.2.12",
       "svelte-writable-derived": "3.1.0",
@@ -4313,7 +4313,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte-hmr/-/svelte-hmr-0.15.3.tgz",
     "version": "0.15.3",
   },
-  "\\"svelte-loadable-store@^2.0.1\\", \\"svelte-loadable-store@2.0.1\\"": Object {
+  "\\"svelte-loadable-store@^2.0.1\\"": Object {
     "dependencies": Object {
       "svelte": "4.2.12",
     },
@@ -4321,7 +4321,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte-loadable-store/-/svelte-loadable-store-2.0.1.tgz",
     "version": "2.0.1",
   },
-  "\\"svelte-outclick@^3.7.0\\", \\"svelte-outclick@3.7.0\\"": Object {
+  "\\"svelte-outclick@^3.7.0\\"": Object {
     "dependencies": Object {
       "@sveltejs/kit": "1.30.4",
       "svelte": "4.2.12",
@@ -4346,7 +4346,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte-preprocess/-/svelte-preprocess-5.1.3.tgz",
     "version": "5.1.3",
   },
-  "\\"svelte-resize-observer@^2.0.0\\", \\"svelte-resize-observer@2.0.0\\"": Object {
+  "\\"svelte-resize-observer@^2.0.0\\"": Object {
     "dependencies": Object {
       "resize-observer-polyfill": "1.5.1",
     },
@@ -4383,7 +4383,7 @@ Object {
     "resolved": "https://registry.npmjs.org/svelte/-/svelte-4.2.12.tgz",
     "version": "4.2.12",
   },
-  "\\"tailwindcss@^3.4.1\\", \\"tailwindcss@3.4.1\\"": Object {
+  "\\"tailwindcss@^3.4.1\\"": Object {
     "dependencies": Object {
       "@alloc/quick-lru": "5.2.0",
       "arg": "5.0.2",
@@ -4417,7 +4417,7 @@ Object {
     "resolved": "https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz",
     "version": "2.2.1",
   },
-  "\\"tauri-plugin-context-menu@^0.7.0\\", \\"tauri-plugin-context-menu@0.7.0\\"": Object {
+  "\\"tauri-plugin-context-menu@^0.7.0\\"": Object {
     "dependencies": Object {
       "@tauri-apps/api": "1.5.3",
     },
@@ -4425,14 +4425,14 @@ Object {
     "resolved": "https://registry.npmjs.org/tauri-plugin-context-menu/-/tauri-plugin-context-menu-0.7.0.tgz",
     "version": "0.7.0",
   },
-  "\\"tauri-plugin-log-api@0.0.0\\"": Object {
+  "\\"tauri-plugin-log-api@github:tauri-apps/tauri-plugin-log#v1\\"": Object {
     "dependencies": Object {
       "@tauri-apps/api": "1.5.3",
     },
     "resolved": "https://codeload.github.com/tauri-apps/tauri-plugin-log/tar.gz/19f5dcc0425e9127d2c591780e5047b83e77a7c2",
     "version": "0.0.0",
   },
-  "\\"tauri-plugin-store-api@0.0.0\\"": Object {
+  "\\"tauri-plugin-store-api@github:tauri-apps/tauri-plugin-store#v1\\"": Object {
     "dependencies": Object {
       "@tauri-apps/api": "1.5.3",
     },
@@ -4474,7 +4474,7 @@ Object {
     "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-2.5.0.tgz",
     "version": "2.5.0",
   },
-  "\\"tinykeys@^2.1.0\\", \\"tinykeys@2.1.0\\"": Object {
+  "\\"tinykeys@^2.1.0\\"": Object {
     "integrity": "sha512-/MESnqBD1xItZJn5oGQ4OsNORQgJfPP96XSGoyu4eLpwpL0ifO0SYR5OD76u0YMhMXsqkb0UqvI9+yXTh4xv8Q==",
     "resolved": "https://registry.npmjs.org/tinykeys/-/tinykeys-2.1.0.tgz",
     "version": "2.1.0",
@@ -4722,7 +4722,7 @@ Object {
     "resolved": "https://registry.npmjs.org/vitefu/-/vitefu-0.2.4.tgz",
     "version": "0.2.4",
   },
-  "\\"vitest@^0.34.6\\", \\"vitest@0.34.6\\"": Object {
+  "\\"vitest@^0.34.6\\"": Object {
     "dependencies": Object {
       "@types/chai": "4.3.6",
       "@types/chai-subset": "1.3.3",
@@ -4875,7 +4875,7 @@ Object {
     "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
     "version": "2.0.0",
   },
-  "\\"which@^2.0.2\\", \\"which@2.0.2\\"": Object {
+  "\\"which@^2.0.2\\"": Object {
     "dependencies": Object {
       "isexe": "2.0.0",
     },

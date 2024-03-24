@@ -6,5 +6,6 @@ import { convert } from '../../../src/npm/v1/index';
 const mocks = fs.readdirSync(path.join('test', 'mock'));
 
 test.each(mocks)('%s', async (mock) => {
-  await expect(convert(path.join('test', 'mock', mock))).resolves.toMatchSnapshot();
+  const converted = await convert(path.join('test', 'mock', mock));
+  expect(converted).toMatchSnapshot();
 });
