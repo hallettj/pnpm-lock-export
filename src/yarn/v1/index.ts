@@ -66,8 +66,11 @@ export function serialize(lock: YarnLock): string {
       let acc = `${path}:
   version "${pkg.version}"
   resolved "${pkg.resolved}"
-  integrity "${pkg.integrity}"
 `;
+
+      if (pkg.integrity) {
+        acc += `  integrity "${pkg.integrity}"\n`
+      }
 
       acc += dependenciesSection("dependencies", pkg.dependencies);
       acc += dependenciesSection("optionalDependencies", pkg.optionalDependencies);
