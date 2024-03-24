@@ -8,5 +8,6 @@ export interface Package {
   resolved: string;
   integrity?: string;
   dependencies?: Dependencies;
+  optionalDependencies?: Dependencies;
   uid?: string;
 }
