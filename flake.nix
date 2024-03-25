@@ -16,6 +16,7 @@
             nodejs
             nodePackages.pnpm
             typescript
+            yarn
           ];
         };
       });
