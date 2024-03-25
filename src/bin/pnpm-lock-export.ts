@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { ArgumentParser } from 'argparse';
 import { writePackageLockV1, writeYarnLockV1 } from '..';
 import { version, description } from '../../package.json';
